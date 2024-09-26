@@ -15,7 +15,7 @@ set -e
 mkdir -p "${cache}/clamav-data"
 
 # Refresh the virus database, the source is specified in the conf file
-freshclam --config-file="${build}/config/clamav/freshclam.conf" --datadir="${cache}/clamav-data/" --log=/dev/stdout --quiet
+freshclam --config-file="${build}/config/clamav/freshclam.conf" --datadir="${cache}/clamav-data/" --quiet
 
 # Replace the old virus database
 rm -rf "${build}/.clamav-data"
