@@ -11,6 +11,9 @@ cache="$2"
 # Stops the execution of the script if a command has an error 
 set -e
 
+# Create the socket file for the daemon:
+touch "${build}/config/clamav/clamd.sock"
+
 # Create a directory for the virus database
 mkdir -p "${cache}/clamav-data"
 
